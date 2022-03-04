@@ -29,7 +29,6 @@ def get_api3():
     resp=common_api(url,params=params)
     total=int(resp['count'])
     max_page=math.ceil(total/30)
-# マックスのページ数を取得。小数点未満の端数切り上げ
     print(f"商品数:{total}")
     print(f"ページ数:{max_page}")
     print ("===================================")
