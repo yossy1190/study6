@@ -25,6 +25,11 @@ def get_api2():
     "page":1
     }
     resp=common_api(url,params)
+    
+    '''
+    最大件数を受け取り、ページ数を表示させる
+    '''
+    
     total=int(resp['count'])
     max_page=math.ceil(total/30)
     print(f"商品数:{total}")
