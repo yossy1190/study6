@@ -13,7 +13,6 @@ shopName=args[0]
 def get_api4():
     df=pd.DataFrame()
     url='https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628'
-
     params={
         'applicationId':1081905647609311133,
         'genreId':100283,
@@ -42,6 +41,7 @@ def get_api4():
         print ("-------------------")
         df=df.append({
             "順位":rank,
+            # 初めの30文字だけを出力させる
             "商品名":str(itemName[:30])+"...",
             "価格":itemPrice,
             "URL":itemUrl},
